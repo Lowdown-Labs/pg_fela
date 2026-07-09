@@ -1,11 +1,24 @@
 # Third-Party Notices
 
 pg_fela (the "extension") is licensed under the PostgreSQL License (see LICENSE).
-It statically links the following third-party Rust crates, each licensed under the
-Apache License, Version 2.0. This file is provided to satisfy the attribution and
-NOTICE requirements of Apache-2.0 section 4(d). The full text of the Apache License,
-Version 2.0 is reproduced once at the end of this file and applies to every
-Apache-2.0 component listed below.
+It statically links the following third-party Rust crates, and embeds the model
+weights listed below, each licensed under the Apache License, Version 2.0. This
+file is provided to satisfy the attribution and NOTICE requirements of Apache-2.0
+section 4(d). The full text of the Apache License, Version 2.0 is reproduced once
+at the end of this file and applies to every Apache-2.0 component listed below.
+
+--------------------------------------------------------------------------------
+
+## FelaTab model weights (`felatab_int8.safetensors`)
+
+Copyright 2026 Lowdown Labs
+
+Source: https://huggingface.co/lowdown-labs/fela-tab
+Licensed under the Apache License, Version 2.0.
+
+Fetched at build time by `build.rs` from `FELATAB_MODEL_URL`, sha256-verified, and
+embedded into `pg_fela.so` via `include_bytes!`. Redistributed in the extension
+binary, in the published container images, and in the `.deb`/`.rpm` packages.
 
 --------------------------------------------------------------------------------
 

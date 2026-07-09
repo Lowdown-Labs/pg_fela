@@ -97,8 +97,9 @@ also supported. Full instructions: [`docs/INSTALL.md`](docs/INSTALL.md).
   to git or Git-LFS; `build.rs` fetches them at compile time from `FELATAB_MODEL_URL` (or a local
   `FELATAB_WEIGHTS` file), verifies the sha256, and `include_bytes!`s them into `pg_fela.so`. The
   tiny matching config (`tests/fixtures/felatab/felatab_config.json`) stays in-repo and is
-  `include_str!`d. The weights are provided under the same PostgreSQL License as the code, see
-  [`LICENSE`](LICENSE).
+  `include_str!`d. The weights come from [`lowdown-labs/fela-tab`](https://huggingface.co/lowdown-labs/fela-tab)
+  and are licensed Apache-2.0, not under this repository's PostgreSQL License; their attribution
+  notice is in [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 - **Runnable SQL examples** ([`examples/`](examples)) and a Docker image ([`Dockerfile`](Dockerfile))
   that builds a ready to query `postgres:18` image with pg_fela already installed.
 - Kernels run single threaded (no thread pool inside a PG backend); pgrx 0.19 supports PG13 to
@@ -153,5 +154,7 @@ bash test/run_pgrx_test.sh          # package -> throwaway cluster -> CREATE EXT
 ```
 
 Licensed under the PostgreSQL License (see [`LICENSE`](LICENSE)). The FelaTab model weights
-(`felatab_int8.safetensors`), embedded into the extension binary at build time, are provided under
-the same PostgreSQL License.
+(`felatab_int8.safetensors`), embedded into the extension binary at build time, come from
+[`lowdown-labs/fela-tab`](https://huggingface.co/lowdown-labs/fela-tab) and are licensed under the
+Apache License, Version 2.0. Both licenses are permissive and impose no restriction on commercial
+use. See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) for the required Apache-2.0 attribution.
