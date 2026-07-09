@@ -1,0 +1,5 @@
+comment = 'pg_fela: in-situ database AutoML with the frozen FelaTab model (full-Rust pgrx build)'
+default_version = '@CARGO_VERSION@'
+module_pathname = '$libdir/pg_fela'
+relocatable = false
+superuser = false

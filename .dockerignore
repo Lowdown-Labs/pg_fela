@@ -1,0 +1,7 @@
+target
+.git
+.superpowers
+docs
+DECISIONS.md
+*.md
+tests/fixtures/felatab/golden.json

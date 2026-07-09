@@ -1,0 +1,39 @@
+
+[graph]
+all-features = false
+no-default-features = false
+
+[output]
+feature-depth = 1
+
+[advisories]
+ignore = [
+    { id = "RUSTSEC-2021-0127", reason = "unmaintained, transitive via pgrx/pgrx-tests dev-deps only; no safe upgrade available upstream" },
+]
+
+[licenses]
+allow = [
+    "PostgreSQL",
+    "MIT",
+    "Apache-2.0",
+    "BSD-3-Clause",
+    "ISC",
+    "Zlib",
+    "Unlicense",
+    "Unicode-3.0",
+]
+confidence-threshold = 0.8
+
+[licenses.private]
+ignore = true
+
+[bans]
+multiple-versions = "warn"
+wildcards = "allow"
+allow-workspace = false
+
+[sources]
+unknown-registry = "warn"
+unknown-git = "warn"
+allow-registry = ["https://github.com/rust-lang/crates.io-index"]
+allow-git = []
