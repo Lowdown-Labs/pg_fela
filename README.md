@@ -5,6 +5,8 @@
 
 # pg_fela - in database AutoML, a pgrx Postgres extension
 
+[pg_fela.webm](https://github.com/user-attachments/assets/afa4c350-550d-4df5-9160-89ee573c62b5)
+
 A full Rust [pgrx](https://github.com/pgcentralfoundation/pgrx) PostgreSQL extension that runs a
 frozen tabular foundation model (FelaTab) inside the database: classify, impute, cluster, score
 anomalies, rank feature importance, and explain predictions with a single `SELECT`, no training
